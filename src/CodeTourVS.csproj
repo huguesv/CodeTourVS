@@ -122,8 +122,8 @@
     <PackageReference Include="Markdig.Wpf">
       <Version>0.4.0</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="16.0.206" ExcludeAssets="runtime" />
-    <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="16.9.1035" />
+    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.0.32112.339" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.2.2098-preview2" />
     <PackageReference Include="VSSDK.GraphModel" version="12.0.4" ExcludeAssets="runtime" />
   </ItemGroup>
   <ItemGroup>
