@@ -51,7 +51,14 @@ namespace CodeTourVS
 
         private void OpenHyperlink(object sender, System.Windows.Input.ExecutedRoutedEventArgs e)
         {
-            Process.Start(e.Parameter.ToString());
+            try
+            {
+                Process.Start(e.Parameter.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         class MyXamlSchemaContext : XamlSchemaContext
