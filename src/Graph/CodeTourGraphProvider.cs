@@ -95,7 +95,7 @@ namespace CodeTourVS
 
                             EnsureAbsolutePath(step);
                             var loc = new SourceLocation(step.AbsoluteFile, new Position(step.Line, 0));
-                            stepNode.SetValue(CodeNodeProperties.SourceLocation, loc);
+                            stepNode.SetValue(CodeTourSchema.StepLocation, loc);
                             stepNode[DgmlNodeProperties.Icon] = _iconStep;
 
                             GraphLink link = graph.Links.GetOrCreate(tourNode, stepNode, null, CodeTourSchema.TourToStepLink);

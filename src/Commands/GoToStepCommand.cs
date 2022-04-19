@@ -54,7 +54,12 @@ namespace CodeTourVS
 
             using (new NewDocumentStateScope(__VSNEWDOCUMENTSTATE2.NDS_TryProvisional, VSConstants.NewDocumentStateReason.SolutionExplorer))
             {
-                VsShellUtilities.OpenDocument(_package, CodeTourManager.CurrentStep.AbsoluteFile);
+                VsShellUtilities.OpenDocumentWithSpecificEditor(
+                    _package, 
+                    CodeTourManager.CurrentStep.AbsoluteFile,
+                    new Guid(EnvDTE80.ContextGuids.vsContextGuidTextEditor),
+                    new Guid(EnvDTE.Constants.vsViewKindCode)
+                );
             }
 
             if (CodeTourManager.CurrentStep.Line > 0)

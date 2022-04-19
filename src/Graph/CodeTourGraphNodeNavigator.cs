@@ -19,7 +19,7 @@ namespace CodeTourVS
             ThreadHelper.ThrowIfNotOnUIThread();
 
             var node = (GraphNode)obj;
-            SourceLocation loc = node.GetValue<SourceLocation>(CodeNodeProperties.SourceLocation);
+            SourceLocation loc = node.GetValue<SourceLocation>(CodeTourSchema.StepLocation);
 
             ThreadHelper.JoinableTaskFactory.RunAsync(async () =>
             {

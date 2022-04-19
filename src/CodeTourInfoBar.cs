@@ -52,7 +52,13 @@ namespace CodeTourVS
 
             foreach (var file in Directory.EnumerateFiles(toursDir, $"*{Constants.TourFileExtension}"))
             {
-                solFolder.ProjectItems.AddFromFile(file);
+                try
+                {
+                    solFolder.ProjectItems.AddFromFile(file);
+                }
+                catch
+                { 
+                }
             }
         }
 
